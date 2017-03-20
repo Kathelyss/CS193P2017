@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var display: UILabel! // Outlet
     
     var userIsInTheMiddleOfTyping = false
     
-    @IBAction func touchDigit(_ sender: UIButton) {
+    @IBAction func touchDigit(_ sender: UIButton) { // Target action
         let digit = sender.currentTitle!
         if userIsInTheMiddleOfTyping {
             let textCurrentlyInDisplay = display.text!
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         }
     }
     
-    var displayValue: Double {
+    var displayValue: Double { // Computed property
         get {
             return Double(display.text!)!
         }
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private var brain = CalculatorBrain()
+    private var brain = CalculatorBrain() // Stored property
     
     @IBAction func performOperation(_ sender: UIButton) {
         if userIsInTheMiddleOfTyping {

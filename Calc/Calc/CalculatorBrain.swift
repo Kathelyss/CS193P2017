@@ -82,3 +82,7 @@ struct CalculatorBrain {
     }
     
 }
+
+
+
+// |let t = accumulator ?? 9| equals to |let t = accumulator != nil ? accumulator : 9|
